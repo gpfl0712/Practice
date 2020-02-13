@@ -11,6 +11,9 @@ bool XminusY_o[23];
 bool* XminusY = XminusY_o + 11; // x - y의 범위는 -11 ~ 11.
 
 int putQueen(int n, int y) { // y번째 줄에 queen을 놓는다.
+	static int opt_cnt = 0;
+	printf("putQueen called, operating count : %d", opt_cnt);
+
 	if (n == y) return 1; // n - 1번째까지 모두 놓았으면 완료.
 	int answer = 0;
 	bool success = false;
@@ -25,7 +28,7 @@ int putQueen(int n, int y) { // y번째 줄에 queen을 놓는다.
 
 int main() {
 	int n; scanf("%d", &n);
-	printf("%d", putQueen(n, 0));
+	printf("res = %d", putQueen(n, 0));
 
 	return 0;
 }
