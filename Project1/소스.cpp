@@ -28,7 +28,7 @@ int putQueen(int n, int y) { // y번째 줄에 queen을 놓는다.
 
 int main() {
 	int n; scanf("%d", &n);
-	printf("%d", putQueen(n, 0));
+	printf("result = %d", putQueen(n, 0));
 
 	return 0;
 }
